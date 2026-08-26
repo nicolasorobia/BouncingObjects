@@ -16,13 +16,13 @@ void Ball::bounce(sf::Vector2i window_size, sf::CircleShape& circle)
     circle.move(velocity);
 
     // bounce from left or right wall
-    if ((xPos + radius >= window_size.x && velocity.x > 0) || (xPos <= 0 && velocity.x < 0))
+    if ((xPos + radius * 2 >= window_size.x && velocity.x > 0) || (xPos <= 0 && velocity.x < 0))
     {
         velocity.x *= -1;
     }
 
     // bounce from top or bottom wall
-    if ((yPos + radius >= window_size.y && velocity.y > 0) || (yPos <= 0 && velocity.y < 0))
+    if ((yPos + radius * 2 >= window_size.y && velocity.y > 0) || (yPos <= 0 && velocity.y < 0))
     {
         velocity.y *= -1;
     }
