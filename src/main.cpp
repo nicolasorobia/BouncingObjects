@@ -2,14 +2,13 @@
 
 int main()
 {
-    auto window = sf::RenderWindow(sf::VideoMode({1920, 1080}), "Bouncing Objects");
+    auto window = sf::RenderWindow(sf::VideoMode({1024, 768}), "Bouncing Objects");
     window.setFramerateLimit(60);
 
     sf::CircleShape ball;
     // Call ball to center of window
     Ball circle(window.getSize(), ball);
     
-
     while (window.isOpen())
     {
         while (const std::optional event = window.pollEvent())
@@ -24,9 +23,9 @@ int main()
 
         // update call to move & bounce ball
         circle.bounce(sf::Vector2i{window.getSize()}, ball);
-        // draw
+        // draw ball into screen
         window.draw(ball);
-    
+
         window.display();
     }
 }
