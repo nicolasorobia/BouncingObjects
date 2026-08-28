@@ -42,6 +42,6 @@ Then run the program:
 .\build\Debug\BouncingObjects.exe
 ```
  
-The window opens with the circle centered; it starts bouncing immediately.
+The window opens with shapes bouncing immediately.
 Close the window to exit.
 
