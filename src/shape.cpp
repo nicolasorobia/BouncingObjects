@@ -1,3 +1,7 @@
+// comment header guard out if using explicit template instantiation
+#ifndef SHAPE_CPP
+#define SHAPE_CPP
+
 #include "shape.h"
 
 template <typename Geometry>
@@ -45,5 +49,8 @@ void Shape<Geometry>::bounce(sf::Vector2u window_size, Geometry& figure)
     }
 }
 
-template class Shape<sf::CircleShape>;
-template class Shape<sf::RectangleShape>;
+// Uncomment if not using header guards:
+// template class Shape<sf::CircleShape>;
+// template class Shape<sf::RectangleShape>;
+
+#endif

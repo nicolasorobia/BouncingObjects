@@ -15,5 +15,5 @@ private:
     
 };
 
-
+#include "shape.cpp" // comment out if not using header guards in shape.cpp
 #endif
